@@ -37,8 +37,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 
 @implementation PFLogInView
 
-#pragma mark -
-#pragma mark Class
+///--------------------------------------
+#pragma mark - Class
+///--------------------------------------
 
 + (PFActionButtonConfiguration *)_defaultSignUpButtonConfiguration {
     PFActionButtonConfiguration *configuration = [[PFActionButtonConfiguration alloc] initWithBackgroundImageColor:[PFColor signupButtonBackgroundColor]
@@ -76,8 +77,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     return configuration;
 }
 
-#pragma mark -
-#pragma mark Init
+///--------------------------------------
+#pragma mark - Init
+///--------------------------------------
 
 - (instancetype)initWithFields:(PFLogInFields)otherFields {
     self = [super initWithFrame:CGRectZero];
@@ -201,8 +203,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     }
 }
 
-#pragma mark -
-#pragma mark UIView
+///--------------------------------------
+#pragma mark - UIView
+///--------------------------------------
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -334,7 +337,8 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
         CGFloat loginButtonTopInset = floorf(24.0f * contentSizeScale.height);
 
         CGRect frame = PFRectMakeWithSizeCenteredInRect([_logInButton sizeThatFits:loginContentSize],
-                                                        loginContentRect);;
+                                                        loginContentRect);
+        ;
         frame.origin.y = currentY + loginButtonTopInset;
         _logInButton.frame = frame;
 
@@ -398,9 +402,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
 }
 
 - (CGSize)_maxContentSize {
-    return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ?
-            CGSizeMake(420.0f, 550.0f) :
-            CGSizeMake(500.0f, 800.0f));
+    return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? CGSizeMake(420.0f, 550.0f) : CGSizeMake(500.0f, 800.0f));
 }
 
 - (CGSize)_contentSizeScaleForContentSize:(CGSize)contentSize {
@@ -415,8 +417,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     return contentSizeScale;
 }
 
-#pragma mark -
-#pragma mark Accessors
+///--------------------------------------
+#pragma mark - Accessors
+///--------------------------------------
 
 - (void)setFields:(PFLogInFields)fields {
     if (_fields != fields) {
@@ -444,8 +447,9 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     }
 }
 
-#pragma mark -
-#pragma mark Private
+///--------------------------------------
+#pragma mark - Private
+///--------------------------------------
 
 + (void)_validateFields:(PFLogInFields)fields {
     if (fields == PFLogInFieldsNone) {
@@ -478,7 +482,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
         keyboardType = UIKeyboardTypeEmailAddress;
         usernamePlaceholder = NSLocalizedString(@"Email", @"Email");
     }
-    
+
     _usernameField.placeholder = usernamePlaceholder;
     _usernameField.keyboardType = keyboardType;
 }
