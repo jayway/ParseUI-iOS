@@ -43,7 +43,9 @@
         [self addSubview:_activityIndicator];
 
         _loadingLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _loadingLabel.text = NSLocalizedString(@"Loading...", @"Loading message of PFQueryTableViewController");
+      _loadingLabel.text = NSLocalizedStringFromTableInBundle(@"Loading...", @"ParseUI",
+                          [NSBundle bundleForClass:[self class]],
+                          @"Loading message of PFQueryTableViewController");
         _loadingLabel.backgroundColor = [UIColor clearColor];
         _loadingLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
         _loadingLabel.shadowColor = [UIColor whiteColor];
