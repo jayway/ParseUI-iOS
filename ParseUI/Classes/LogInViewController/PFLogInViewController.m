@@ -29,6 +29,7 @@
 #import "PFPrimaryButton.h"
 #import "PFSignUpViewController.h"
 #import "PFTextField.h"
+#import "PFLogInView_Private.h"
 
 NSString *const PFLogInSuccessNotification = @"com.parse.ui.login.success";
 NSString *const PFLogInFailureNotification = @"com.parse.ui.login.failure";
@@ -114,7 +115,6 @@ NSString *const PFLogInCancelNotification = @"com.parse.ui.login.cancel";
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
 #pragma mark -
 #pragma mark UIViewController
 
@@ -167,6 +167,17 @@ NSString *const PFLogInCancelNotification = @"com.parse.ui.login.cancel";
 
 - (BOOL)emailAsUsername {
     return self.logInView.emailAsUsername;
+}
+
+- (void)setFields:(PFLogInFields)fields {
+    if (_fields != fields) {
+        _fields = fields;
+
+        // Avoid force loading logInView
+        if (_logInView) {
+            _logInView.fields = fields;
+        }
+    }
 }
 
 - (void)setDelegate:(id<PFLogInViewControllerDelegate>)delegate {
