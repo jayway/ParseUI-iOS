@@ -243,6 +243,7 @@
 		81FC6B741A9D1D4700104E45 /* CustomProductTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProductTableViewController.swift; sourceTree = "<group>"; };
 		8CBD5368A83B8B99AC0AE128 /* libPods-ParseUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B128030D1BAFD8C4001048AC /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/ParseUI.strings; sourceTree = "<group>"; };
 		B774A7483212431D2C034600 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B91892E5A1364B4A9F064902 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAC07E0554694100DB518D /* ParseUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ParseUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1179,6 +1180,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				81B3F26B1AC9EDE000A92677 /* en */,
+				B128030D1BAFD8C4001048AC /* sv */,
 			);
 			name = ParseUI.strings;
 			sourceTree = "<group>";
